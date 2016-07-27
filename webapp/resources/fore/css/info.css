@@ -1,0 +1,41 @@
+.info{overflow: hidden; padding-bottom: 20px;}
+/*左侧*/
+.info .left{ float: left; width: 238px; border: 1px solid #eee;}
+.info .left ul{ padding: 15px 20px;}
+.info .left li{ float: left; margin-bottom: 10px;}
+.info .left a{ float: left; padding-left: 83px; width: 115px; height: 40px; background: url(/resources/fore/image/info/left_icon.png) no-repeat; font-size: 14px; line-height: 40px;}
+.info .left a.active{ background: #f61 url(/resources/fore/image/info/left_icon.png) no-repeat; border-radius: 5px; color: #fff;}
+.info .left a:hover{ background: #f8f8f8 url(/resources/fore/image/info/left_icon.png) no-repeat; border-radius: 5px;text-decoration: none;}
+.info .left a.active:hover{background: #f61 url(/resources/fore/image/info/left_icon.png) no-repeat; border-radius: 5px; color: #fff;}
+.info .left a.icon01{background-position: 46px 0;}
+.info .left a.icon02{background-position: 46px -40px;}
+.info .left a.icon03{background-position: 46px -80px;}
+.info .left a.icon04{background-position: 46px -120px;}
+.info .left a.icon05{background-position: 46px -160px;}
+.info .left .active.icon01{background-position: 46px -200px;}
+.info .left .active.icon02{background-position: 46px -240px;}
+.info .left .active.icon03{background-position: 46px -280px;}
+.info .left .active.icon04{background-position: 46px -320px;}
+.info .left .active.icon05{background-position: 46px -360px;}
+.info .left .active.icon01:hover{background-position: 46px -200px;}
+.info .left .active.icon02:hover{background-position: 46px -240px;}
+.info .left .active.icon03:hover{background-position: 46px -280px;}
+.info .left .active.icon04:hover{background-position: 46px -320px;}
+.info .left .active.icon05:hover{background-position: 46px -360px;}
+
+
+/*右侧*/
+.right{ float: left; padding: 0 20px; margin-left: 10px; width: 708px; border: 1px solid #eee;}
+.right .title{ position: relative; width: 708px; height: 40px; border-bottom: 1px solid #eee;}
+.right .title .s{ position: absolute; left: 0; top: 0; width: 100px; height: 39px; border-bottom: 2px solid #f61; text-align: center; line-height: 40px; font-size: 18px;}
+.right .content {padding: 30px 0;}
+.right .content p{ font-size: 14px; line-height: 30px; text-indent: 2em;}
+
+/*诚聘英才*/
+.right .job p{ padding: 0 10px; text-indent: 0;}
+.right .job .p1{ color: #ff7300; font-size: 18px;}
+.right .job .p2{ margin-bottom: 30px; border-bottom: 1px dashed #ddd;}
+
+
+/**/
+.link_QQ{position: fixed; top: 180px; left: 50%; margin-left: 502px; width: 40px; height: 77px; background: url(/resources/fore/image/info/link_QQ.png) no-repeat;}

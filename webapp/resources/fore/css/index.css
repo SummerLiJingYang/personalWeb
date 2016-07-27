@@ -1,0 +1,90 @@
+/*banner*/
+.banner{overflow: hidden; position: relative; width: 100%; min-width: 1000px; height: 300px;}
+.banner .banner_list{ height: 300px;}
+.banner li{ float: left; width: 100%; min-width: 1000px; height: 300px;}
+.banner li a{display:block; width: 100%; height: 100%;}
+.banner .dot{ position: absolute; bottom: 7px; width: 100%; text-align: center;}
+.banner .dot a{ display: inline-block; margin: 0 7px 0 8px; width: 60px; height: 5px; background: #ccc;}
+.banner .dot a.on{ background: #f61;}
+
+
+/*div标题*/
+.div_title01 .icon{ background:#f61 url(/resources/fore/image/index/icon.png) no-repeat 35px 0;}
+.div_title02 .icon{ background:#f61 url(/resources/fore/image/index/icon.png) no-repeat 35px -40px;}
+.div_title03 .icon{ background:#f61 url(/resources/fore/image/index/icon.png) no-repeat 35px -80px;}
+.div_title04 .icon{ background:#f61 url(/resources/fore/image/index/icon.png) no-repeat 35px -120px;}
+.div_title .en{ width: 250px;}
+.div_title01 .en{ background: url(/resources/fore/image/index/icon.png) no-repeat 0 -160px;}
+.div_title02 .en{ background: url(/resources/fore/image/index/icon.png) no-repeat 0 -200px;}
+.div_title03 .en{ background: url(/resources/fore/image/index/icon.png) no-repeat 0 -240px;}
+.div_title04 .en{ background: url(/resources/fore/image/index/icon.png) no-repeat 0 -280px;}
+
+
+/*技术服务*/
+.technical{ position: relative; overflow: hidden; margin: 0 auto; width: 1000px; height: 350px;}
+/*.technical .technical_list{ position: absolute; left: 0; top: 0; height: 330px;}*/
+.technical #technical_div{ overflow: hidden; float: left; width: 1000px; height: 350px;}
+.technical .technical_list{width: 10000000px}
+.technical #technical_list1,.technical #technical_list2{float: left;}
+.technical ul{ float: left; height: 350px;}
+.technical li{ margin-right: 10px; position: relative; float: left; width: 190px; height: 348px; border: 1px solid #eee;}
+.technical li img{ width: 190px; height: 235px;}
+.technical li .icon{position: absolute; padding-top: 10px; left: -1px; top: -1px; width: 27px; height: 86px; background: url(/resources/fore/image/index/technical_icon.png) no-repeat 0 0; font-size: 14px; color: #fff; line-height: 14px; text-align: center;}
+.technical li p{ padding: 0 7px; color: #666; font-size: 12px; line-height: 20px;}
+.technical li .p1{font-size: 16px; font-weight: bold; line-height: 40px; color: #333;}
+.technical li .p2{overflow: hidden; font-weight: bold; text-overflow:ellipsis; white-space: nowrap;}
+.technical li .info{ display: none; position: absolute; left: -1px; top: -1px; padding: 10px; width: 168px; height: 326px; border: 2px solid #f61; background: #f8f8f8; font-size: 14px; line-height: 22px;}
+.technical .prev{position: absolute; left: 0; top: 139px; width: 40px; height: 40px; background: url(/resources/fore/image/index/technical_icon.png) no-repeat 0 -100px; z-index: 1;}
+.technical .next{position: absolute; right: 0; top: 139px; width: 40px; height: 40px; background: url(/resources/fore/image/index/technical_icon.png) no-repeat 0 -150px; z-index: 1;}
+
+
+/*设备展区*/
+.equipment{ overflow: hidden; margin: 0 auto; width: 1000px; height: auto;}
+.equipment .tab { width: 1000px; height: 35px; border-left: 1px solid #ddd;}
+.equipment .tab li{ float: left; width: 199px; height: 33px; border: 1px solid #ddd; border-left: none; background: #f7f7f7; font-size: 16px; text-align: center; line-height: 33px;}
+.equipment .tab li.on{ background: #fff; border-top: 2px solid #f61; border-bottom: none; line-height: 32px; color: #ff7300;}
+.equipment .tab li a{ display: inline-block; width: 100%; height: 100%;}
+.equipment .tab li a:hover{text-decoration: none;}
+.equipment .content{ margin-top: 10px; overflow: hidden; width: 1000px; height: 260px;}
+.equipment .content ul{ width: 1010px; height: 260px;}
+.equipment .content li{ margin-right: 10px; float: left; width: 192px; height: 260px;}
+.equipment .content li p{ line-height: 20px;}
+.equipment .content li .intercept_text{padding-right: 5px;}
+.equipment .content li .p1{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-size: 14px; font-weight: bold; line-height: 30px;}
+.equipment .company{ padding: 0 1px; overflow: hidden; width: 996px; height: 54px; border: 1px solid #ddd;}
+.equipment .company ul{ width: 996px; height: 54px;}
+.equipment .company li{ position: relative; float: left; width: 166px; height: 54px;}
+.equipment .company li .bd{ position: absolute; right: 0; top: 9px; width: 10px; height: 39px; border-right: 1px dotted #ddd;}
+.equipment .company li img{z-index: 1;}
+.equipment .company li.last .bd{ border-right: none;}
+
+
+/*塑料资讯*/
+.plastics{ margin: 0 auto; overflow: hidden; width: 1000px; height: 263px;}
+.plastics ul{ width: 1020px; height: 263px;}
+.plastics li{ margin-right: 20px; float: left; width: 320px; height: 263px;}
+.plastics .article_title{ margin-bottom: 10px; border-left: 3px solid #f61; background: #f7f7f7; height: 28px; line-height: 28px; font-size: 16px;}
+.plastics .article_title a:hover{text-decoration: none;}
+.plastics .article_title .more{ float: right; margin-right: 4px; padding-right: 15px; height: 28px; background: url(/resources/fore/image/index/icon.png) no-repeat 25px -330px; color: #666; font-size: 12px;}
+.plastics .first_article{ margin-bottom: 10px; height: 135px;}
+.plastics .first_article img{ float: left; margin-right: 10px; width: 145px; height: 135px;}
+.plastics .first_article p{ line-height: 20px; color: #666;}
+.plastics .first_article .p1{ overflow: hidden; padding-bottom: 18px; line-height: 18px; color: #333; font-weight: bold; text-overflow:ellipsis; white-space: nowrap;}
+.plastics .first_article .color{color: #f61;}
+.plastics .more_article{ padding-top: 4px; height: 76px; background: #f7f7f7;}
+.plastics .more_article p{ padding: 0 5px 0 16px; height: 24px; background: url(/resources/fore/image/index/icon.png) no-repeat 0 -360px; line-height: 24px;}
+.plastics .more_article p a{ float: left; margin-right: 5px; overflow: hidden; width: 220px; height: 24px; text-overflow:ellipsis; white-space: nowrap;}
+
+
+/*项目申请*/
+.project .p1{ margin-bottom: 10px; font-size: 12px; line-height: 45px;}
+.project .p1 .icon{ display: inline-block; width: 19px; height: 19px; background: url(/resources/fore/image/index/icon.png) no-repeat 0 -430px; vertical-align: middle;}
+.project .template{ padding-left: 28px; margin-top: 10px; width: 54px; height: 25px; background: url(/resources/fore/image/index/icon.png) no-repeat 0 -390px; color: #f61; line-height: 25px;}
+.project .template:hover{text-decoration: none;}
+
+
+
+
+
+/*上线背景*/
+.shangxian{ padding-top: 20px; height: 100px; background: url(/resources/fore/image/index/shangxian.png?v=20160628) no-repeat center top;}

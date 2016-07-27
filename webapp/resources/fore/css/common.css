@@ -1,0 +1,128 @@
+/*初始化样式start*/
+body,div,form,ul,li,ol,dl,dt,dd,p,h1,h2,h3,h4,h5,h6 {margin:0; padding:0; font-weight:normal; font-family:'Arial','Microsoft YaHei','宋体';}
+body,div{font-size: 12px;}
+table , tr ,td {margin:0;padding:0; border-collapse:collapse;color:#333;}
+em,i {font-style:normal;}
+img,input {border:0; }
+ul,li {list-style-type:none;vertical-align:middle;}
+button,input[type=submit]{ font-family:'Arial','Microsoft YaHei','宋体';}
+a {text-decoration:none;color:#333;}
+a:hover {color: #f61;}
+.clear {clear:both;}
+.clearfix:after{content: "0"; display: block; height: 0; clear: both; visibility: hidden;}
+/*初始化样式end*/
+
+
+/*common*/
+.fl { float:left; }
+.fr { float:right; }
+.mt_10{margin-top: 10px;}
+.mb_10{margin-bottom: 10px;}
+.mr_10{margin-right: 10px;}
+.ml_10{margin-left: 10px;}
+.mt_15{margin-top: 15px;}
+.mb_15{margin-bottom: 15px;}
+.mr_15{margin-right: 15px;}
+.ml_15{margin-left: 15px;}
+.w1000{margin: 0 auto; width: 1000px;}
+.black20{ background: url(/resources/fore/image/common/black20.png);}
+
+
+/*头部*/
+#logo_div{ width: 100%; min-width: 1000px; height: 100px; }
+#logo_div .logo{ float: left; margin: 10px 0 0 25px;}
+#logo_div .telephone{ float: right; padding-left: 45px; margin: 30px 45px 0 0; height: 40px; background: url(/resources/fore/image/common/header_icon.png) no-repeat 0 0; font-size: 14px;}
+#logo_div .telephone .s{ font-size: 24px; color: #999;}
+
+#nav{ margin: 0 auto; width: 100%; min-width: 1000px; height: 40px; background: #f61; line-height: 40px;}
+#nav li{position: relative; float: left; width: 160px; height: 40px; background: url(/resources/fore/image/common/header_icon.png) no-repeat 0 -50px; vertical-align: middle; text-align: center; font-size: 16px;}
+#nav li .bg{ display: none; position: absolute; left: 0; top: 0; width: 161px; height: 40px; background: #d50; z-index: 3;}
+#nav li .hover{ display: none; position: absolute; left: 0; top: 0; width: 161px; height: 40px; background: #fe7a34; z-index: 2;}
+#nav li .a{ position: absolute; left: 0; top: 0; width: 160px; height: 40px; z-index: 4; color: #fff;}
+#nav li .a:hover{ text-decoration: none;}
+#nav li.on .bg{display: block;}
+#nav .more_nav{ *z-index: 1}
+#nav .more_nav_div{ position: absolute; top: 40px; left: 0; width: 238px; background: #f61; z-index: 3}
+#nav li.on .more_nav_div{background: #d50;}
+#nav .more_nav_div a{ float: left; padding-left: 48px; width: 190px; height: 40px; border-top: 1px solid #bb4b04; background: none; text-align: left; font-size: 16px; color: #fff; line-height: 40px;}
+#nav .more_nav_div a:hover{ background: #fe7a34; text-decoration: none;}
+
+
+/*底部*/
+#footer{ margin: 0 auto; padding: 15px 0 40px 0; width: 1000px; border-top: 1px solid #ccc; text-align: center; color: #666; line-height: 28px;}
+#footer a{color: #666;}
+#footer .authentication{margin-top: 10px;}
+
+
+/*栏目名*/
+.div_title{ margin: 25px 0 10px 0; width: 1000px; height: 38px; border-bottom: 2px solid #f61;}
+.div_title .icon{ float: left; padding-left: 70px; width: 130px; height: 38px; background: #f61; color: #fff; line-height: 38px; font-size: 20px;}
+.div_title .en{ margin-left: 10px; float: left; height: 38px;}
+.div_title .more{ float: right; margin-top: 20px; color: #f61; font-size: 14px;}
+
+
+/*留言弹窗*/
+.message_tip{position: fixed; top: 50%; left: 50%; margin: -212px 0 0 -375px; padding-bottom: 20px; width: 750px; background: #fff; box-shadow: 2px 2px 20px #a5a4a4; z-index: 999;}
+.message_tip .title{ padding-left: 30px; height: 40px; background: #f61; font-size: 18px; font-weight: bold; text-align: center; line-height: 40px; color: #fff;}
+.message_tip .title .close{ float: right; margin: 8px 8px 0 0; width: 22px; height: 22px; background: url(/resources/fore/image/common/messagetip_icon.png) no-repeat 0 0;}
+.message_tip .content{ padding: 10px; width: 730px;}
+.message_tip .content textarea{ padding: 5px; width: 718px; height: 137px; border: 1px solid #ddd; font-size: 14px; line-height: 20px;}
+.message_tip .p1{ padding-left: 13px; background: #f5f5f5; height: 35px; line-height: 35px; color: #f61;}
+.message_tip .info{ float: left; margin-top: 10px; line-height: 32px;}
+.message_tip .info .color{color: #ff7300;}
+.message_tip .info .input_text{ padding: 0 5px; border: 1px solid #ddd; width: 108px; height: 30px; line-height: 30px; vertical-align: middle;}
+.message_tip .info .s{ float: left; width: 68px; text-align: right;}
+.message_tip .info .label_div{float: left; width: 660px;}
+.message_tip .info label{position: relative; margin:0 10px 10px 0; float: left; width: 91px; height: 32px; vertical-align: middle;}
+.message_tip .info .input_checkbox{ position: absolute; left: 0; top: 0; display: inline-block; width: 89px; height: 30px; background: #fff; border: 1px solid #ddd; text-align: center; line-height: 30px; z-index: 2; cursor: pointer;}
+.message_tip .info .input_checkbox.check{ border: 1px solid #f60; background: #fff url(/resources/fore/image/common/messagetip_icon.png) no-repeat 68px -25px;}
+.message_tip .info .input_checkbox2{ position: absolute; left: 0; top: 0; z-index: 1;}
+.message_tip .btn{ display: inline-block; margin-left: 300px; width: 122px; height: 40px; background: #f61; border: none; border-radius: 2px; font-size: 16px; color: #fff; text-align: center; line-height: 40px;}
+.message_tip .error{ float: left; width: 100%; color: #f00; line-height: 30px;}
+.message_success{position: fixed; top: 50%; left: 50%; margin: -75px 0 0 -175px; width: 350px; height: 150px; background: #fff; box-shadow: 2px 2px 20px #a5a4a4; z-index: 999;}
+.message_success .title{ padding-left: 30px; height: 40px; background: #f61; font-size: 18px; font-weight: bold; text-align: center; line-height: 40px; color: #fff;}
+.message_success .title .close{ float: right; margin: 8px 8px 0 0; width: 22px; height: 22px; background: url(/resources/fore/image/common/messagetip_icon.png) no-repeat 0 0;}
+.message_success .content{ padding-top: 45px; font-size: 14px; text-align: center;}
+
+
+/*电梯*/
+.lift{position:fixed; display: none; top:192px; left:50%; margin-left:510px; width:60px; border-top: 3px solid #f61; z-index: 1001;}
+.lift ul li{ width: 60px; height: 30px; background: #f5f5f5; border-bottom: 1px solid #dcdcdc; text-align: center; line-height: 30px; color: #555; cursor: pointer;}
+.lift ul li.f4{padding: 5px 2px; width: 56px; height: auto;  line-height: normal;}
+.lift .go_top{ width:60px; height:40px;}
+.lift .go_top a{display:block; width: 60px; height: 40px; background:url(/resources/fore/image/common/lift_icon.png) no-repeat 0 0;}
+.lift .leave_message{ display: block; padding: 45px 10px 0 10px; width: 40px; height: 40px; background:url(/resources/fore/image/common/lift_icon.png) no-repeat 0 -40px; color: #f61; text-align: center;}
+
+/*地址栏*/
+.breadcrumb{ margin:0 auto; width: 1000px; height: 40px; line-height: 40px; color: #666;}
+.breadcrumb a{color: #666;}
+.breadcrumb .color{color: #f61;}
+
+/*页码*/
+.page_a01{clear:left;padding: 20px 0px;text-align: center;}
+.page_a01 a{display:inline-block; margin:0px 2px 0 3px; padding:0 11px; height:28px; line-height:28px; border:solid 1px #ddd; text-decoration:none; text-align:center; vertical-align: middle;}
+.page_a01 a:hover{border:solid 1px #f61;}
+.page_a01 .on{display:inline-block; margin:0px 2px 0 3px; padding:0 5px; min-width:20px; height:28px; line-height:28px; border:solid 1px #ddd; text-align:center; background:#f61; color:#fff; vertical-align: middle;}
+.page_a01 .total{display:inline-block;margin: 0px 5px;}
+.page_a01 .to{display:inline-block;}
+.page_a01 .n{border:solid 1px #ddd; width:35px; height:21px; line-height: 21px; text-align:center; vertical-align: middle;}
+.page_a01 .go{display:inline-block;margin-left:10px; width:56px; height:28px; line-height:28px; border:solid 1px #ddd; text-align:center; cursor:pointer; vertical-align: middle;}
+.page_a01 .go:hover{background:#f61; color:#fff;}
+
+/*.page_a02{clear:left;padding:20px 0px;text-align: center;}
+.page_a02 a{display:inline-block;margin:0px 2px;padding:3px 8px;min-width:20px;height:30px;line-height:30px;border:solid 1px #cccccc;text-decoration:none;text-align:center; vertical-align: middle;}
+.page_a02 a:hover{border:solid 1px #0088dd;}
+.page_a02 .on{display:inline-block;margin:0px 2px;padding:3px 8px;min-width:20px;height:30px;line-height:30px;border:solid 1px #0088dd;text-align:center;background:#0088dd;color:#FFFFFF; vertical-align: middle;}
+.page_a02 .total{display:inline-block;margin: 0px 5px;}
+.page_a02 .to{display:inline-block;}
+.page_a02 .n{border:solid 1px #CCCCCC;padding:5px;width:29px;height:26px;line-height: 26px;text-align:center; vertical-align: middle;}
+.page_a02 .go{display:inline-block;margin-left:10px;padding:3px 8px;width:30px;height:30px;line-height:30px;border:solid 1px #cccccc;text-align:center;background:#f5f5f5;cursor:pointer; vertical-align: middle;}
+.page_a02 .go:hover{background:#3399ff;color:#fff;}
+*/
+
+
+/*错误页等*/
+.error_404{ padding: 30px 0; margin: 0 auto; width: 1000px; text-align: center;}
+.error_404 .p1{ margin-top: 30px; font-size: 30px;}
+.error_404 .p2{font-size: 16px; color: #666; line-height: 40px;}
+.error_404 .btn{ display: inline-block; margin-top: 20px; width: 138px; height: 41px; background: url(/resources/fore/image/common/error_btn.png) no-repeat; color: #fff; line-height: 41px; font-size: 18px;}

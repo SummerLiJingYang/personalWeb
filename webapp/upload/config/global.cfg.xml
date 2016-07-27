@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 全局配置文件 -->
+<configuration>
+  <!--xml配置文件可用于相对比较固定或者内容包含中文的情况,不能设置自动更新-->
+
+  <!--properties配置文件用于相对变动较多,配置中不含或者只含有少量中文的情况,可以设置自动更新,不用重启即可刷新配置,刷新时间由refreshDelay参数进行设置,单位为毫秒(本例中为10分钟刷新一次)-->
+  <!--   
+  <properties config-name='log4j_config' fileName="WEB-INF/config/log4j/log4j.properties"  throwExceptionOnMissing="true" config-optional="true">
+	  <reloadingStrategy refreshDelay="600000"
+	      config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/>  
+  </properties>
+  -->
+  
+  <!-- 注意,配置文件的路径若为相对路径,则一定不能以/符号开头,否则在linux下会无法找到配置文件. -->  
+  
+  <!-- 缓存配置文件 -->
+  <xml config-name='common_config' fileName="upload/config/common.cfg.xml" throwExceptionOnMissing="true" config-optional="true"/>    
+</configuration>
+
+

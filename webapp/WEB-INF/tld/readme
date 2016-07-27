@@ -1,0 +1,16 @@
+jsp的tld在freemarker里使用如下：
+1. 定义[#assign shiro=JspTaglibs["/WEB-INF/tld/shiro.tld"] /]
+2.获得用户名[@shiro.principal /]
+3.判断权限是否存在
+    			[#list ["admin:news","admin:newsCate"] as permission]
+							[@shiro.hasPermission name = permission]
+								<li>
+									<a href="#news">栏目文章管理</a>
+								</li>
+								[#break /]
+							[/@shiro.hasPermission]
+						[/#list]
+4.[@shiro.authenticated] 判断是否登录过 [/@shiro.authenticated]
+
+
+[@shiro.principal /]

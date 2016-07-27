@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/aop
+    	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+    	http://www.springframework.org/schema/cache 
+    	http://www.springframework.org/schema/cache/spring-cache-4.0.xsd
+    	http://www.springframework.org/schema/task
+      	http://www.springframework.org/schema/task/spring-task-4.0.xsd      
+        " default-lazy-init="true">
+        
+    <!-- Hibernate4 -->
+	<!-- 加载资源文件  其中包含变量信息，必须在Spring配置文件的最前面加载，即第一个加载-->
+	<context:property-placeholder location="classpath:persistence-mysql.properties" />    
+        
+    <context:component-scan base-package="com.zsl.web" >
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+    
+    <!-- 开启AOP监听 只对当前配置文件有效 -->
+    <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true"/>
+    
+    <aop:config expose-proxy="true" proxy-target-class="true"/>
+     
+    <cache:annotation-driven cache-manager="cacheManager" />
+
+	<bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+    </bean>
+
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcacheManager"/>
+        <property name="transactionAware" value="true"/>
+    </bean>
+	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.FixedLocaleResolver">
+		<property name="defaultLocale" value="zh_CN" />
+	</bean>
+        
+	<!-- 国际化的消息资源文件（本系统中主要用于显示/错误消息定制） -->  
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">  
+	    <property name="basenames">  
+	        <list>  
+	            <!-- 在web环境中一定要定位到classpath 否则默认到当前web应用下找  -->  
+	            <value>/WEB-INF/language/admin/message</value>  
+	            <value>/WEB-INF/language/common/message</value>  
+	            <value>/WEB-INF/language/fore/message</value>  
+	        </list>  
+	    </property>  
+	    <property name="useCodeAsDefaultMessage" value="false"/>  
+	    <property name="defaultEncoding" value="UTF-8"/>  
+	    <property name="cacheSeconds" value="60"/>  
+	</bean>  
+	
+	<!-- 注意：FreeMarker与SpringMVC集成时，其配置一定要放在SpringMVC的配置之前 -->
+	<!-- 否则：在访问"/getUser"时服务器就会报告[HTTP Status 404 - /WEB-INF/jsp/myfree.jsp] -->
+	<bean id="freemarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<!-- 指定FreeMarker模板文件目录 -->
+		<property name="templateLoaderPath" value="/WEB-INF/view/ftl" />
+		<!-- 编码设置 -->
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="defaultEncoding">UTF-8</prop>
+				<prop key="url_escaping_charset">UTF-8</prop>
+				<prop key="locale">zh_CN</prop>
+				<prop key="template_update_delay">0</prop>
+				<!-- 设置标签类型 两种：[] 和 <> 。[] 这种标记解析要快些 -->  
+				<prop key="tag_syntax">auto_detect</prop> 
+				<prop key="whitespace_stripping">true</prop>
+				<prop key="classic_compatible">true</prop>
+				<prop key="number_format">0.######</prop>
+				<prop key="boolean_format">true,false</prop>
+				<prop key="datetime_format">yyyy-MM-dd</prop>
+				<prop key="date_format">yyyy-MM-dd</prop>
+				<prop key="time_format">HH:mm:ss</prop>
+				<prop key="object_wrapper">freemarker.ext.beans.BeansWrapper</prop>
+			</props>
+		</property>
+		<property name="freemarkerVariables">
+			<map>
+				<entry key="systemName" value="资讯后台管理系统" />
+				<entry key="systemVersion" value="1.0" />
+				<entry key="systemDescription" value="资讯后台管理系统" />
+				<entry key="base" value="#{servletContext.contextPath}" />
+				<entry key="principal" value="#{T(org.apache.shiro.SecurityUtils).getSubject().getPrincipal()}"/>
+				<entry key="locale" value="zh_CN" />
+				<entry key="flash_message" value-ref="flashMessageDirective" />
+				<entry key="pagination" value-ref="paginationDirective"></entry>
+				<entry key="date_convert" value-ref="dateConvertMethod"/>
+				<entry key="head" value-ref="headDirective" />
+				
+				<entry key="abbreviate" value-ref="abbreviateMethod" />
+				<entry key="blankMethod" value-ref="blankMethod" />
+				<entry key="techService" value-ref="techServiceDirective"/>
+				<entry key="carouselFigureList" value-ref="carouselFigureDirective"/>
+				<entry key="techCounselor" value-ref="techCounselorDirective"/>
+				<entry key="techCounselorIndex" value-ref="techCounselorIndexDirective"/>
+				<!--首页资讯获取-->
+				<entry key="news_list" value-ref="newsDirective"/>
+				<!-- 首页设备获取 -->
+				<entry key="device_list" value-ref="deviceDirective"/>
+			</map>
+		</property>
+	</bean>
+        
+	    <!-- 数据源配置, 使用 BoneCP 数据库连接池 -->
+	<bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
+	    <!-- 数据源驱动类可不写，Druid默认会自动根据URL识别DriverClass -->
+	    <property name="driverClassName" value="${hibernate.connection.driverClass}" />
+	    
+		<!-- 基本属性 url、user、password -->
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${hibernate.connection.username}" />
+		<property name="password" value="${hibernate.connection.password}" />
+		
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="10" />
+		<property name="minIdle" value="10" /> 
+		<property name="maxActive" value="200" />
+		
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />
+		
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+		
+		<property name="validationQuery" value="SELECT 'x'" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		
+		<!-- 配置监控统计拦截的filters -->
+	    <property name="filters" value="stat" /> 
+	</bean>
+   
+ 
+   
+   <bean id="sessionFactory" 
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.zsl.web.**.model</value>
+			</list>
+		</property> 
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+				
+				<!--  <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>-->
+				<!--  <prop key="hibernate.current_session_context_class">thread</prop> --> 
+			</props>
+		</property>
+	</bean>
+	<!-- JDBC模板 -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+         <property name="dataSource" ref="multipleDataSource" />
+    </bean>
+	<!-- 配置Hibernate事务管理器 -->
+	<bean id="transactionManager"
+    	class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+      <property name="sessionFactory" ref="sessionFactory" />
+      <property name="dataSource" ref="multipleDataSource" />
+   </bean>
+   
+       <!-- 基于注释的事务，当注释中发现@Transactional时，使用id为“transactionManager”的事务管理器  -->
+    <!-- 如果没有设置transaction-manager的值，则spring以缺省默认的事务管理器来处理事务，默认事务管理器为第一个加载的事务管理器 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+   
+   <!-- 配置事务异常封装 -->
+   <bean id="persistenceExceptionTranslationPostProcessor" 
+   	class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+   <!-- 验证码 -->
+   <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+		<property name="config">
+			<bean class="com.google.code.kaptcha.util.Config">
+				<constructor-arg>
+					<props>
+						<prop key="kaptcha.border">no</prop>
+						<prop key="kaptcha.border.color">105,179,90</prop>
+						<prop key="kaptcha.textproducer.font.color">red</prop>
+						<prop key="kaptcha.image.width">250</prop>
+						<prop key="kaptcha.textproducer.font.size">70</prop>
+						<prop key="kaptcha.image.height">90</prop>
+						<prop key="kaptcha.session.key">code</prop>
+						<prop key="kaptcha.textproducer.char.length">4</prop>
+						<!--  <prop key="kaptcha.obscurificator.impl">com.google.code.kaptcha.impl.ShadowGimpy</prop>-->
+					    <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+					</props>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+	
+	<task:annotation-driven />  
+	<import resource="spring-shiro.xml"/>
+</beans>

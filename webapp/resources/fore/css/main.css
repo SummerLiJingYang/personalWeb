@@ -1,0 +1,187 @@
+/*技术服务*/
+.technical_services .banner{margin: 0 auto; overflow: hidden; position: relative; width: 1000px; height: 287px; text-align: center;}
+.technical_services .banner .banner_list{ height: 287px;}
+.technical_services .banner li{ float: left; width: 100%; height: 287px;}
+.technical_services .banner li img{ width: 100%; height: 287px;}
+.technical_services .banner .dot{ position: absolute; padding-right: 10px; bottom: 7px; width: 990px; text-align: right;}
+.technical_services .banner .dot a{ display: inline-block; margin: 0 5px 0 0; width: 15px; height: 15px; background: #ccc;}
+.technical_services .banner .dot a.on{ background: #f61;}
+.technical_services .div_title .icon{ padding-left: 50px; width: 150px;}
+.technical_services .div_title .en{width: 280px;}
+.technical_services .div_title01 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 0;}
+.technical_services .div_title02 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 -40px;}
+.technical_services .div_title03 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 -80px;}
+.technical_services .div_title04 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 -120px;}
+.technical_services .div_title05 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 -160px;}
+.technical_services .div_title06 .en{ background: url(/resources/fore/image/main/technical_services_icon.png) no-repeat 0 -200px;}
+.technical_services .box{ overflow: hidden; margin: 10px auto 0; width: 1000px;}
+.technical_services .box ul{ float: left; width: 1010px;}
+.technical_services .box li{ margin: 0 10px 10px 0; position: relative; float: left; width: 190px; height: 348px; border: 1px solid #eee;}
+.technical_services .box li img{ width: 190px; height: 235px;}
+.technical_services .box li p{ padding: 0 7px; color: #666; font-size: 12px; line-height: 20px;}
+.technical_services .box li .p1{font-size: 16px; font-weight: bold; line-height: 40px; color: #333;}
+.technical_services .box li .p2{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-weight: bold;}
+.technical_services .box li .info{ display: none; position: absolute; left: -1px; top: -1px; padding: 10px; width: 168px; height: 326px; border: 2px solid #f61; background: #f9f9f9; font-size: 14px; line-height: 22px;}
+.technical_services .box li .icon{position: absolute; padding-top: 10px; left: -1px; top: -1px; width: 27px; height: 86px; background: url(/resources/fore/image/index/technical_icon.png) no-repeat 0 0; font-size: 14px; color: #fff; line-height: 14px; text-align: center;}
+.technical_services .box li.other{ padding-top: 250px; height: 98px; background: url(/resources/fore/image/main/technical_services_other.png) no-repeat top center; text-align: center; color: #c7c7c7; line-height: 24px; font-size: 16px;}
+.technical_services .box li.other p{ font-size: 16px;}
+
+/*设备展区*/
+.equipment_exhibition .box{margin: 0 auto; width: 1000px;}
+.equipment_exhibition .tab { width: 1000px; height: 35px; border-left: 1px solid #ddd;}
+.equipment_exhibition .tab li{ float: left; width: 199px; height: 33px; border: 1px solid #ddd; border-left: none; background: #f7f7f7; font-size: 16px; text-align: center; line-height: 33px;}
+.equipment_exhibition .tab li.on{ background: #fff; border-top: 2px solid #f61; border-bottom: none; line-height: 32px; color: #ff7300;}
+.equipment_exhibition .tab li a{ display: inline-block; width: 100%; height: 100%;}
+.equipment_exhibition .tab li a:hover{text-decoration: none;}
+.equipment_exhibition .content_div{ margin-top: 10px; overflow: hidden; width: 1000px;}
+.equipment_exhibition .filter_div{ position: relative; overflow: hidden; width: 998px; background: #f7f7f7; border: 1px solid #eee; border-bottom: none; line-height: 35px;}
+.equipment_exhibition .filter_div .s{ float: left; padding-left: 10px; width: 70px; height: 35px;}
+.equipment_exhibition .filter_div .filter_list{ float: left; width: 915px;}
+.equipment_exhibition .filter_div .filter_list a{ float: left; padding-right: 50px; height: 35px;}
+.equipment_exhibition .filter_div .filter_list a.on{color: #f61;}
+.equipment_exhibition .filter_div .down_btn{position: absolute; right: 10px; width:43px; background:url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat 27px -90px; text-decoration:none; cursor:pointer;}
+.equipment_exhibition .filter_div .down_btn:hover{ background:url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat 27px -120px; color:#f61;}
+.equipment_exhibition .filter_div .up_btn{position: absolute; display: none; right: 10px; width:43px; background:url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat -23px -90px; text-decoration:none; cursor:pointer;}
+.equipment_exhibition .filter_div .up_btn:hover{background:url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat -23px -120px; color:#f61;}
+.equipment_exhibition .filter_div.height01{height: 50px; line-height: 50px;}
+.equipment_exhibition .filter_div.height01 .s{height: 50px;}
+.equipment_exhibition .filter_div.height01 .filter_list{height: 50px;}
+.equipment_exhibition .filter_div.height01 .filter_list .append{ float: left; margin: 11px 10px 0 0; padding:0 8px; height: 24px; border: 1px solid #eee; background: #fff; color: #f61; line-height: 24px; text-align: center;}
+.equipment_exhibition .filter_div.height01 .filter_list .append em{ float: right; margin-left: 8px; width: 11px; height: 24px; background: url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat 0 -60px; cursor: pointer;}
+.equipment_exhibition .filter{ margin-bottom: 10px; width: 998px; height: 50px; background: #f7f7f7; border: 1px solid #eee; line-height: 50px;}
+.equipment_exhibition .filter .s{ float: left; padding-left: 10px; width: 70px; height: 50px;}
+.equipment_exhibition .filter .input_text{ margin: 0 15px 0 7px; padding: 0 5px; width: 148px; height: 26px; border: 1px solid #ddd; line-height: 26px;}
+.equipment_exhibition .filter .submit_btn{ width: 80px; height: 28px; background: url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat 0 0; line-height: 28px; font-weight: bold; color: #fff;}
+.equipment_exhibition .result .list li{ position:relative; float: left; padding: 10px 0; height: 128px; border-bottom: 1px solid #eee; color: #666;}
+.equipment_exhibition .result .list li:hover{background: #f8f8f8;}
+.equipment_exhibition .result .list .one{ padding-right: 10px; float: left; width: 445px; height: 128px; border-right: 1px dashed #eee;}
+.equipment_exhibition .result .list .one img{ float: left; margin-right: 10px; width: 198px; height: 126px; border: 1px solid #eee;}
+.equipment_exhibition .result .list .one p{ line-height: 20px;}
+.equipment_exhibition .result .list .one .p1{ margin: 10px 0; font-weight: bold;}
+.equipment_exhibition .result .list .two{ float: left; padding: 13px 10px 0; width: 234px; height: 115px; border-right: 1px dashed #eee;}
+.equipment_exhibition .result .list .two p{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap; line-height: 24px;}
+.equipment_exhibition .result .list .three{ float: left; padding: 13px 10px 0; width: 163px; height: 115px; border-right: 1px dashed #eee;}
+.equipment_exhibition .result .list .three p{ line-height: 24px;}
+.equipment_exhibition .result .list .three .p1{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+.equipment_exhibition .result .list .three .color{color: #f61; font-weight: bold;}
+.equipment_exhibition .result .list .buy_now{ float: left; padding-left: 30px; margin: 50px 0 0 15px; width: 59px; height: 28px; background: url(/resources/fore/image/main/equipment_exhibition_icon.png) no-repeat 0 -30px; color: #fff; line-height: 28px; font-weight: bold;}
+.equipment_exhibition .result .list .buy_now:hover{text-decoration: none;}
+.equipment_exhibition .result .list .box_d{ position: absolute; top: 10px; left: 0; width: 1000px; height: 128px;}
+.equipment_exhibition .result .list .box_a{position: absolute; top: 0; left: 0; width: 1000px; height: 148px;}
+
+
+/*设备详情*/
+.equipment_exhibition_detail .detail{ width: 1000px; height: 340px;}
+.equipment_exhibition_detail .detail .img_list{ float: left; margin-right: 20px; width: 400px; height: 340px;}
+.equipment_exhibition_detail .detail .img_list ul{ overflow: hidden; width: 398px; height: 254px; border: 1px solid #eee;}
+.equipment_exhibition_detail .detail .img_list li{ float: left; width: 398px; height: 254px; text-align: center;}
+.equipment_exhibition_detail .detail .img_list li div{ display: table; width: 398px; height: 254px; vertical-align: middle;}
+.equipment_exhibition_detail .detail .img_list li div span{ display: table-cell; width: 398px; height: 254px; vertical-align: middle;}
+.equipment_exhibition_detail .detail .img_list li img{ max-width: 398px; max-height: 254px;}
+.equipment_exhibition_detail .detail .img_list .dot{ text-align: center;}
+.equipment_exhibition_detail .detail .img_list .dot .a_div{ display: inline-block; margin:13px 5px 0 5px; width: 48px; height: 48px; border: 1px solid #eee; vertical-align: middle; *float: left;}
+.equipment_exhibition_detail .detail .img_list .dot .a_div.on{ width: 46px; height: 46px; border: 2px solid #f61;}
+.equipment_exhibition_detail .detail .img_list .dot .a_div div{ display: table; width: 46px; height: 46px; vertical-align: middle;}
+.equipment_exhibition_detail .detail .img_list .dot .a_div div span{ display: table-cell; width: 46px; height: 46px; vertical-align: middle;}
+.equipment_exhibition_detail .detail .img_list .dot img{ max-width: 46px; max-height: 46px;}
+.equipment_exhibition_detail .detail .text_info{ float: left; width: 580px; height: 340px; color: #666;}
+.equipment_exhibition_detail .detail .text_info h1{ font-size: 16px; color: #333; font-weight: bold; line-height: 30px;}
+.equipment_exhibition_detail .detail .text_info .p1{ line-height: 18px;}
+.equipment_exhibition_detail .detail .text_info .p2{ padding: 0 90px 0 20px; margin: 10px 0; width: 470px; height: 90px; background: #fff2e8; font-size: 30px; color: #f61; line-height: 90px;}
+.equipment_exhibition_detail .detail .text_info .p2 a{ padding-left: 53px; float: right; margin-top: 24px; width: 97px; height: 40px; background: url(/resources/fore/image/main/equipment_exhibition_detail_icon.png) no-repeat 0 0; font-size: 18px; color: #fff; line-height: 40px;}
+.equipment_exhibition_detail .detail .text_info .p2 a:hover{text-decoration: none;}
+.equipment_exhibition_detail .detail .text_info .p3{ overflow: hidden; line-height: 30px; text-overflow:ellipsis; white-space: nowrap;}
+.equipment_exhibition_detail .detail .text_info .p3 .s{ display: inline-block; overflow: hidden; width: 340px; text-overflow:ellipsis; white-space: nowrap; vertical-align: middle;}
+.equipment_exhibition_detail .detail_o{ margin-bottom: 10px; width: 998px; border: 1px solid #eee;}
+.equipment_exhibition_detail .detail_o .title{ padding: 10px 0; height: 20px; background: #f7f7f7;}
+.equipment_exhibition_detail .detail_o .title .icon{ padding-left: 8px; margin-left: 10px; float: left; width: 300px; height: 20px; border-left: 4px solid #f61; background: url(/resources/fore/image/main/equipment_exhibition_detail_icon.png) no-repeat 88px -50px; font-size: 16px; font-weight: bold;}
+.equipment_exhibition_detail .detail_o .title .icon01{background-position: 88px -80px;}
+.equipment_exhibition_detail .detail_o .text .content{ padding: 20px 30px 30px;}
+.equipment_exhibition_detail .detail_o .text .content p{ font-size: 14px; line-height: 24px; text-indent: 2em;}
+.equipment_exhibition_detail .detail_o .img  .content{ padding: 30px 0; text-align: center;}
+.equipment_exhibition_detail .detail_o .img  .content img{ max-width: 998px;}
+
+
+/*塑料资讯*/
+.plastics_news .box{ position: relative; overflow: hidden; width: 1000px;}
+.plastics_news .tab { position: absolute; top: 0; left: 0; width: 754px; height: 35px; border-left: 1px solid #ddd;}
+.plastics_news .tab li{ float: left; width: 250px; height: 33px; border: 1px solid #ddd; border-left: none; background: #f7f7f7; font-size: 16px; text-align: center; line-height: 33px;}
+.plastics_news .tab li.on{ background: #fff; border-top: 2px solid #f61; border-bottom: none; line-height: 32px; color: #ff7300;}
+.plastics_news .tab li a{ display: inline-block; width: 100%; height: 100%;}
+.plastics_news .tab li a:hover{text-decoration: none;}
+.plastics_news .left{ float: left; margin: 53px 20px 0 0; width: 754px;}
+.plastics_news .right{ float: left; width: 224px; border: 1px solid #eee;}
+.plastics_news .first{ float: left; width: 752px; height: 280px; border: 1px solid #eee;}
+.plastics_news .first img{ float: left; margin-right: 13px; width: 485px; height: 280px;}
+.plastics_news .first p{ float: left; width: 235px; line-height: 24px; color: #666; font-size: 14px;}
+.plastics_news .first .p1{ padding-bottom: 10px; margin: 15px 0 10px; border-bottom: 1px solid #eee; font-size: 16px; font-weight: bold; color: #333;}
+.plastics_news .first .color{ color: #f61;}
+.plastics_news .other_list li{ float: left; padding-top: 15px; width: 754px; border-bottom: 1px solid #eee;}
+.plastics_news .other_list li:hover{background: #f8f8f8;}
+.plastics_news .other_list .p1{ font-size: 16px; font-weight: bold; line-height: 40px;}
+.plastics_news .other_list .intercept_text{ font-size: 14px; line-height: 24px; color: #666;}
+.plastics_news .other_list .p2{ color: #999; line-height: 46px;}
+.plastics_news .list_title{ padding: 0 9px; height: 37px; border-bottom: 1px solid #f61; background: #f7f7f7; line-height: 37px; font-weight: bold;}
+.plastics_news .list_title .more{ float: right; font-weight: normal;}
+.plastics_news .list01,.plastics_news .list02{ padding: 16px 16px 0;}
+.plastics_news .list01 li{ margin-bottom: 10px; position: relative; padding-bottom: 7px; float: left; width: 190px; height: 340px; border: 1px solid #eee;}
+.plastics_news .list01 li img{ width: 190px; height: 235px;}
+.plastics_news .list01 li p{ padding: 0 7px; color: #666; font-size: 12px; line-height: 20px;}
+.plastics_news .list01 li .p1{font-size: 16px; font-weight: bold; line-height: 40px; color: #333;}
+.plastics_news .list01 li .p2{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-weight: bold;}
+.plastics_news .list01 li .info{ display: none; position: absolute; left: -1px; top: -1px; padding: 10px; width: 168px; height: 328px; border: 2px solid #f61; background: #f8f8f8; font-size: 14px; line-height: 22px;}
+.plastics_news .list02 li{ margin-bottom: 20px; position: relative; float: left; width: 190px; height: 308px; border: 1px solid #eee;}
+.plastics_news .list02 li img{ width: 190px; height: 185px;}
+.plastics_news .list02 li p{ padding: 0 7px; color: #666; font-size: 12px; line-height: 20px;}
+.plastics_news .list02 li .p1{ overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-size: 16px; font-weight: bold; line-height: 40px; color: #333;}
+.plastics_news .list02 li .intercept_text{ height: 50px;}
+.plastics_news .list02 li .leave_message{ position: absolute; bottom: -1px; left: -1px; width: 190px; height: 29px; border: 1px solid #f79647; background: #fff; text-align: center; line-height: 29px; color: #f79647;}
+.plastics_news .list02 li .leave_message:hover{text-decoration: none;}
+.plastics_news .list03 li{ padding: 5px 10px 15px; border-bottom: 1px solid #eee;}
+.plastics_news .list03 li img{ margin-left: -10px;}
+.plastics_news .list03 li p{ line-height: 22px; color:#666;}
+
+
+/*塑料资讯-详情*/
+.plastics_news_detail{ overflow: hidden;}
+.plastics_news_detail .left{ padding-bottom: 20px; float: left; width: 700px;}
+.plastics_news_detail .right{ padding-bottom: 20px; float: left; width: 290px;}
+.plastics_news_detail .left .info_text{ float: left; width: 698px; border: 1px solid #eee;}
+.plastics_news_detail .left .info_text h1{ font-size: 24px; line-height: 70px; color: #ff7300; text-align: center;}
+.plastics_news_detail .left .info_text .p1{ height: 40px; text-align: center; line-height: 30px; color: #666;}
+.plastics_news_detail .left .info_text .share{ margin-left: 50px; width: 600px; height: 40px; border-bottom: 1px solid #eee; text-align: center;}
+.plastics_news_detail .left .info_text .text_content{padding: 20px;}
+.plastics_news_detail .left .info_text .text_content table,.plastics_news_detail .left .info_text .text_content td{ border: 1px solid #000;}
+.plastics_news_detail .left .info_text .text_content p{ font-size: 14px; line-height: 30px; text-indent: 2em;}
+.plastics_news_detail .left .info_text .disclaimer{padding:15px 20px; background: #f7f7f7; line-height: 24px; color: #999;}
+.plastics_news_detail .right .box{ width: 288px; border: 1px solid #eee;}
+.plastics_news_detail .right .title{ padding: 0 5px 0 8px; height: 36px; background: #f7f7f7; border-bottom: 1px solid #f61; line-height: 36px; font-weight: bold;}
+.plastics_news_detail .right .title .more{ float: right; height: 36px; font-weight: normal;}
+.plastics_news_detail .right .list{ padding: 8px 0 15px 0;}
+.plastics_news_detail .right .list li{ padding: 0 7px 0 15px;background: url(/resources/fore/image/main/plastics_news_detail_icon.png) no-repeat; line-height: 28px;}
+.plastics_news_detail .right .list a{ overflow: hidden; margin-right: 5px; float: left; width: 190px; height: 28px; text-overflow:ellipsis; white-space: nowrap;}
+
+
+/*项目申请*/
+.project_report .banner{margin: 0 auto 10px; overflow: hidden; position: relative; width: 1000px; height: 280px; text-align: center;}
+.project_report .banner .banner_list{ height: 280px;}
+.project_report .banner li{ float: left; width: 100%; height: 280px;}
+.project_report .banner li img{ width: 1000px; height: 280px;}
+.project_report .banner .dot{ position: absolute; padding-right: 10px; bottom: 7px; width: 990px; text-align: right;}
+.project_report .banner .dot a{ display: inline-block; margin: 0 5px 0 0; width: 15px; height: 15px; background: #ccc;}
+.project_report .banner .dot a.on{ background: #f61;}
+.project_report .box_title{ padding-left: 15px; height: 39px; border: 1px solid #eee; border-bottom: 2px solid #f61; font-size: 16px; line-height: 39px;}
+.project_report .box_two{ overflow: hidden; width: 1000px;}
+.project_report .box_two ul{ float: left; width: 1008px;}
+.project_report .box_two li{ margin: 0 10px 10px 0; float: left; width: 240px; height: 78px; border: 1px solid #eee;}
+.project_report .box_two li img{opacity: 0.5; filter:Alpha(opacity=50);}
+.project_report .box_two li img.op{opacity: 1; filter:Alpha(opacity=100);}
+.project_report .box_three .p1{ margin-bottom: 10px; font-size: 12px; line-height: 45px;}
+.project_report .box_three .p1 .icon{ display: inline-block; width: 19px; height: 19px; background: url(/resources/fore/image/index/icon.png) no-repeat 0 -430px; vertical-align: middle;}
+.project_report .box_three .template{ padding-left: 28px; margin-top: 10px; width: 54px; height: 25px; background: url(/resources/fore/image/index/icon.png) no-repeat 0 -390px; color: #f61; line-height: 25px;}
+.project_report .box_three .template:hover{text-decoration: none;}
+#tip_message{ display:none; position:absolute; left:0; top:0; padding:10px; background:#fff; border:1px solid #f61; line-height:24px; color: #666; z-index:9999;}
+
+
+
+

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ivp-cfg>
+  	<MenCache>
+		<host>192.168.3.200</host>
+		<port>11211</port>
+	</MenCache>
+	<province>
+		<name>北京市</name>
+		<name>上海市</name>
+		<name>天津市</name>
+		<name>重庆市</name>
+		<name>广东省</name>
+		<name>江苏省</name>
+		<name>浙江省</name>
+		<name>安徽省</name>
+		<name>福建省</name>
+		<name>江西省</name>
+		<name>山东省</name>
+		<name>河南省</name>
+		<name>湖北省</name>
+		<name>湖南省</name>
+		<name>河北省</name>
+		<name>山西省</name>
+		<name>辽宁省</name>
+		<name>吉林省</name>
+		<name>黑龙江省</name>
+		<name>海南省</name>
+		<name>四川省</name>
+		<name>贵州省</name>
+		<name>云南省</name>
+		<name>陕西省</name>
+		<name>甘肃省</name>
+		<name>青海省</name>
+		<name>内蒙古自治区</name>
+		<name>广西壮族自治区</name>
+		<name>西藏自治区</name>
+		<name>宁夏回族自治区</name>
+		<name>新疆维吾尔自治区</name>
+		<name>中国台湾</name>
+		<name>中国香港</name>
+		<name>中国澳门</name>
+		<name>其他</name>
+	</province>
+	<!-- 前端域名（后端调用前端使用，比如资讯预览;前端直接读取域名使用） 上线修改为http://www.zhaosuliao.com-->
+	<fore>
+		<domain>http://webadmin.zhaosuliao.test</domain>
+	</fore>
+</ivp-cfg>
